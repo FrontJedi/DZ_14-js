@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ_14 Olek</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        // Задание 1:
+        // Написать функцию, которая по введенному номеру дня недели выводит его название. Нумерация дней недели начинается с 1 – понедельник, 2 — вторник и т. д.
+
+        let num1 = parseInt(prompt('Введите день недели цифрой'));
+
+        function week(num1) {
+            if (num1 === 1) {
+                weekDay = `${num1} день недели понедельник`;
+            }
+            else if (num1 === 2) {
+                weekDay = `${num1} день недели вторник `;
+            }
+            else if (num1 === 3) {
+                weekDay = `${num1} день недели среда`;
+            }
+            else if (num1 === 4) {
+                weekDay = `${num1} день недели четверг`;
+            }
+            else if (num1 === 5) {
+                weekDay = `${num1} день недели пятница`;
+            }
+            else if (num1 === 6) {
+                weekDay = `${num1} день недели суббота`;
+            }
+            else if (num1 === 7) {
+                weekDay = `${num1} день недели воскресенье`;
+            }
+            else {
+                weekDay = 'в неделе только 7 дней';
+            }
+            console.log(weekDay);
+        }
+
+        week(num1);
+
+
+
+
+
+        // Задание 2:
+        // Напишите функцию, которая проверяет, является ли введенное с клавиатуры число — целым числом.
+
+        let num2 = +prompt('Введите число для проверки целостности');
+
+        function wholeNumber(num2) {
+            if (num2 === parseInt(num2)) {
+                console.log(`${num2} целое число`);
+            }
+            else {
+                console.log(`${num2} не целое число`);
+            }
+        }
+
+        wholeNumber(num2);
+
+
+
+
+
+        // Задание 3:
+        // Написать функцию которая возводит введенное с клавиатуры число, в степень n, степень и число вводится с клавиатуры.
+
+        let num3 = parseInt(prompt('Введите число'));
+        let n1 = parseInt(prompt('Введите степень'));
+
+        function raiseN(num3, n1) {
+            console.log(num3 ** n1);
+        }
+
+        raiseN(num3, n1);
+
+
+
+
+
+
+
+
+        // Задание 5:
+        // Напишите функцию, которая пишет в консоль число в заданном диапазоне.
+        // Используйте Math.random().
+
+        let min = parseInt(prompt('введите Min число'));
+        let max = parseInt(prompt('введите Max число'));
+
+        function range(max, min) {
+            rangeNumber = parseInt(Math.random() * (max - min) + min);
+
+            console.log(rangeNumber);
+        }
+
+        range(max, min);
+
+
+
+
+
+        // Задание 6:
+        // Написать функцию isYearLeap, принимающую 1 аргумент — год, и возвращающую true, если год високосный, и false иначе.
+
+        let year = parseInt((prompt('Введите год')));
+
+        function isYearLeap(year) {
+            if (year % 4 === 0 && year % 100 != 0 || year % 400 === 0) {
+                console.log(`${year} высокосный год`);
+            }
+            else {
+                console.log(`${year} не высокосный год`);
+            }
+        }
+
+        isYearLeap(year);
+
+
+
+
+
+
+        // Задание 7:
+        // Пользователь делает вклад в размере n рублей сроком на years лет под 10 % годовых(каждый год размер его вклада увеличивается на 10 %.
+        // Эти деньги прибавляются к сумме вклада, и на них в следующем году тоже будут проценты).
+
+        // let years = parseInt(prompt('Введите срок вклада в годах'));
+        // let n2 = parseInt(prompt('Введите количество денег'));
+
+
+        function bank(n2, years) {
+            const RATE = 1.1;
+            return n2 * (RATE ** years);
+        }
+
+        const result = bank(
+            +prompt('деньги'),
+            +prompt('количество лет')
+        );
+        console.log(result);
+        
+
+
+
+
+
+
+
+
+        // Задание 8:
+        // В зависимости от того, что выберет пользователь(ввести в prompt), вычислить площадь либо прямоугольника, либо треугольника, либо круга.
+        // Если выбраны прямоугольник или треугольник, то надо запросить длины сторон, если круг, то его радиус.
+        // Нужно написать 4 функции, по 1 для каждой фигуры и одна общая.
+
+        // let figure = prompt('Введите фигуру на выбор: прямоугольник, треугольник или круг');
+
+        // function figure()
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
